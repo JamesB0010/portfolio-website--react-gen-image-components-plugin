@@ -1,0 +1,30 @@
+{
+  "name": "portfolio-website-react-gen-image-components-plugin.ts",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/JamesB0010/portfolio-website--react-gen-image-components-plugin.ts#readme",
+  "bugs": {
+    "url": "https://github.com/JamesB0010/portfolio-website--react-gen-image-components-plugin.ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesB0010/portfolio-website--react-gen-image-components-plugin.ts.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "webpack": "^5.107.2"
+  },
+  "dependencies": {
+    "@types/node": "^26.0.1",
+    "fast-glob": "^3.3.3"
+  }
+}
