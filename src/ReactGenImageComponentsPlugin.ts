@@ -29,7 +29,7 @@ export class ReactGenImageComponentsPlugin implements WebpackPluginInstance {
             for (const file of imageFiles)
             {
                 const fileName = file.split("/").pop()?.split(".")[0] as string;
-                const imageImportString = `import ${fileName} from "../../${file}";`;
+                const imageImportString = `import ${fileName}Image from "../../${file}";`;
 
                 const tsContents = `${imageImportString}
 import {ImgHTMLAttributes} from "react";
@@ -38,7 +38,7 @@ ${comments.join("\n").slice(0, -1)}
 export const ${fileName} = (props: ImgHTMLAttributes<HTMLImageElement>) =>
 {
     return (
-        <img src={${fileName}} {...props}/>
+        <img src={${fileName}Image} {...props}/>
     )
 }`;
 
