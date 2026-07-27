@@ -32,15 +32,15 @@ export class ReactGenImageComponentsPlugin implements WebpackPluginInstance {
                 const imageImportString = `import ${fileName}Image from "../../${file}";`;
 
                 const tsContents = `${imageImportString}
-import {ImgHTMLAttributes} from "react";
+import {ForwardedRef, ImgHTMLAttributes, forwardRef} from "react";
 
 ${comments.join("\n").slice(0, -1)}
-export const ${fileName} = (props: ImgHTMLAttributes<HTMLImageElement>) =>
+export const ${fileName} = forwardRef((props: ImgHTMLAttributes<HTMLImageElement>, ref: ForwardedRef<HTMLImageElement>) =>
 {
     return (
-        <img src={${fileName}Image} {...props}/>
+        <img ref={ref} src={${fileName}Image} {...props}/>
     )
-}`;
+            })`;
 
                 const tsPath = `${folderDestination}/${fileName}.tsx`;
                 
